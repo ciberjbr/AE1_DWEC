@@ -1,0 +1,12 @@
+Pasos para clonar un repositorio de github:
+
+1 Creo una carpeta
+2 la abro con cmd
+3 ejecuto el comando "git clone URL"
+4 abro la carpeta con vscode 
+
+Otra opción: 
+1 abro vscode
+2 busco git clone y le doy
+3 elijo la carpeta donde quiero que se cree 
+otra carpeta con el repositorio clonado
