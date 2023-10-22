@@ -1,4 +1,3 @@
-<script>
 function cargar(){
     /* CREACIÓN DE NODO */
 
@@ -19,7 +18,7 @@ function cargar(){
     //enlace.parentNode.removeChild(enlace);
     
 };
-</script>
+
 
 
 
