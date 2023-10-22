@@ -3,20 +3,20 @@ function cargar(){
     /* CREACIÓN DE NODO */
 
     // Crear nodo de tipo Element
-    var encabezado = document.createElement("p");//<p></p>
-    encabezado.id = "parrafo1" //<p id="parrafo1"></p>
+    var encabezado = document.createElement("h1");//<h1></h1>
+    encabezado.id = "encabezado" //<p id="encabezado"></p>
     
     // Crear nodo de tipo Text
-    var contenido = document.createTextNode("Hola Mundo!");//Hola Mundo!
+    var contenido_encabezado = document.createTextNode("Hola Mundo!");//Hola Mundo!
     
     // Añadir el nodo Text como hijo del nodo Element
-    encabezado.appendChild(contenido);//<p id="parrafo1">Hola Mundo!</p>
+    encabezado.appendChild(contenido_encabezado);//<h1 id="encabezado">Hola Mundo!</h1>
     
     // Añadir el nodo Element como hijo de la pagina
-    document.body.appendChild(encabezado);
+    document.body.div_inicial.appendChild(encabezado);
 
     /* BORRADO DE NODO */
-    enlace.parentNode.removeChild(enlace);
+    //enlace.parentNode.removeChild(enlace);
     
 };
 </script>
@@ -29,5 +29,5 @@ function cargar(){
 
 
 
-var inicio = document.getElementById("div_inicial");
+//var inicio = document.getElementById("div_inicial");
 
