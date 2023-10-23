@@ -213,11 +213,11 @@ function listarPeliculas(){
     }
 
     
-    
+     div_inicial.appendChild(tabla)
 //Añadimos la tabla al div
     //div2.innerHTML = ""
 
-    div_inicial.appendChild(tabla)
+   
     
 
     var p2 = document.createElement ("p")
