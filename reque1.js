@@ -410,16 +410,19 @@ function listarPeliculas(){
     var br = document.createElement("br")
     formulario.appendChild(br)
 
+    var imagenheroes = document.createElement("img")
+    imagenheroes.src = "images/superheroes_marvel_resized.jpg"
+    formulario.appendChild(imagenheroes)
+
     
     
     
-    var labelheroefav = document.createElement("label")
+    var labelheroefav = document.createElement("h3")
     var txtheroefav = document.createTextNode("Elige tu superheroe favorito de entre estos 6")
     labelheroefav.appendChild(txtheroefav)
     formulario.appendChild(labelheroefav)
 
-    var br = document.createElement("br")
-    formulario.appendChild(br)
+    
 
     var inputheroe1 = document.createElement("input")
     inputheroe1.type = "radio"
@@ -526,6 +529,7 @@ function listarPeliculas(){
     formulario.appendChild(br)
     
 
+     
 
     var inputheroe6 = document.createElement("input")
     
@@ -551,15 +555,17 @@ function listarPeliculas(){
     formulario.appendChild(br)
 
 
+    var imagenvillanos = document.createElement("img")
+    imagenvillanos.src = "images/villanos_marvel_resized.jpg"
+    formulario.appendChild(imagenvillanos)
 
 
-    var labelvillanofav = document.createElement("label")
+    var labelvillanofav = document.createElement("h3")
     var txtvillanofav = document.createTextNode("Elige tu villano favorito de entre estos 6")
     labelvillanofav.appendChild(txtvillanofav)
     formulario.appendChild(labelvillanofav)
 
-    var br = document.createElement("br")
-    formulario.appendChild(br)
+    
 
     var inputvillano1 = document.createElement("input")
     inputvillano1.type = "radio"
@@ -691,7 +697,187 @@ function listarPeliculas(){
     var br = document.createElement("br")
     formulario.appendChild(br)
 
+
     
+    var txtcheckboxes = document.createElement("h3")
+    var contenidoCheckboxes = document.createTextNode("Marque las casillas que le correspondan")
+    txtcheckboxes.appendChild(contenidoCheckboxes)
+    formulario.appendChild(txtcheckboxes)
+    
+
+    var checkbox1 = document.createElement("input")
+    checkbox1.type = "checkbox"
+    checkbox1.id = "18"
+    checkbox1.name = "mayorEdad"
+    checkbox1.value = "si"
+
+    formulario.appendChild(checkbox1)
+
+    var labelcheckbox1 = document.createElement("label")
+    var txtlabelcheckbox1 = document.createTextNode("¿Eres mayor de edad?")
+    labelcheckbox1.appendChild(txtlabelcheckbox1)
+    formulario.appendChild(labelcheckbox1)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+
+    var checkbox2 = document.createElement("input")
+    checkbox2.type = "checkbox"
+    checkbox2.id = "intolerancias"
+    checkbox2.name = "intolerancias"
+    checkbox2.value = "si"
+
+    formulario.appendChild(checkbox2)
+
+    var labelcheckbox2 = document.createElement("label")
+    var txtlabelcheckbox2 = document.createTextNode("¿Tienes alguna intolerancia alimenticia?")
+    labelcheckbox2.appendChild(txtlabelcheckbox2)
+    formulario.appendChild(labelcheckbox2)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+    
+    var checkbox3 = document.createElement("input")
+    checkbox3.type = "checkbox"
+    checkbox3.id = "compañia"
+    checkbox3.name = "compañia"
+    checkbox3.value = "si"
+
+    formulario.appendChild(checkbox3)
+
+    var labelcheckbox3 = document.createElement("label")
+    var txtlabelcheckbox3 = document.createTextNode("¿Vienes acompañado?")
+    labelcheckbox3.appendChild(txtlabelcheckbox3)
+    formulario.appendChild(labelcheckbox3)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+
+    var checkbox4 = document.createElement("input")
+    checkbox4.type = "checkbox"
+    checkbox4.id = "mañana"
+    checkbox4.name = "mañana"
+    checkbox4.value = "si"
+
+    formulario.appendChild(checkbox4)
+
+    var labelcheckbox4 = document.createElement("label")
+    var txtlabelcheckbox4 = document.createTextNode("¿Marque en caso de venir en horario de mañana")
+    labelcheckbox4.appendChild(txtlabelcheckbox4)
+    formulario.appendChild(labelcheckbox4)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+
+
+    var checkbox5 = document.createElement("input")
+    checkbox5.type = "checkbox"
+    checkbox5.id = "tarde"
+    checkbox5.name = "tarde"
+    checkbox5.value = "si"
+
+    formulario.appendChild(checkbox5)
+
+    var labelcheckbox5 = document.createElement("label")
+    var txtlabelcheckbox5 = document.createTextNode("¿Marque en caso de venir en horario de tarde?")
+    labelcheckbox5.appendChild(txtlabelcheckbox5)
+    formulario.appendChild(labelcheckbox5)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+   
+
+
+
+    var labelselect = document.createElement("label")
+    
+
+    var txtlabelselect = document.createTextNode("Seleccione el día de la semana en el que usted vendrá")
+    labelselect.appendChild(txtlabelselect)
+    formulario.appendChild(labelselect)
+
+    var select1 = document.createElement("select")
+    select1.name = "diaAsistencia"
+
+    var option1 = document.createElement("option")
+    option1.value = "lunes"
+    var txtoption1 = document.createTextNode("Lunes")
+    option1.appendChild(txtoption1)
+    select1.appendChild(option1)
+
+    var option2 = document.createElement("option")
+    option2.value = "martes"
+    var txtoption2 = document.createTextNode("Martes")
+    option2.appendChild(txtoption2)
+    select1.appendChild(option2)
+
+    var option3 = document.createElement("option")
+    option2.value = "miercoles"
+    var txtoption3 = document.createTextNode("Miércoles")
+    option3.appendChild(txtoption3)
+    select1.appendChild(option3)
+
+    var option4 = document.createElement("option")
+    option4.value = "jueves"
+    var txtoption4 = document.createTextNode("Jueves")
+    option4.appendChild(txtoption4)
+    select1.appendChild(option4)
+
+    var option5 = document.createElement ("option")
+    option5.value = "viernes"
+    var txtoption5 = document.createTextNode ("Viernes")
+    option5.appendChild(txtoption5)
+    select1.appendChild(option5)
+
+    var option6 = document.createElement ("option")
+    option6.value = "sabado"
+    var txtoption6 = document.createTextNode ("Sabado")
+    option6.appendChild(txtoption6)
+    select1.appendChild(option6)
+
+    var option7 = document.createElement ("option")
+    option7.value = "domingo"
+    var txtoption7 = document.createTextNode("Domingo")
+    option7.appendChild(txtoption7)
+    select1.appendChild(option7)
+
+    formulario.appendChild(select1)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+
+    var labeltextarea = document.createElement("label")
+    var txtlabeltextarea = document.createTextNode("Observaciones:")
+    labeltextarea.appendChild(txtlabeltextarea)
+    formulario.appendChild(labeltextarea)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+    var observaciones = document.createElement("textarea")
+    observaciones.rows = "5"
+    observaciones.cols = "80"
+    observaciones.style = "resize: none;"
+    formulario.appendChild(observaciones)
+    
+
+
+
+
+
+
+
+
+
 
 
 
