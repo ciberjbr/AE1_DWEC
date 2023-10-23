@@ -264,33 +264,51 @@ function listarPeliculas(){
 
 
     var labeldni= document.createElement("label")
-    //labeldni.form = "labdni"
+    
     var dnitxt = document.createTextNode("DNI :")
     labeldni.appendChild(dnitxt)
+    
+    var atrlabeldni = document.createAttribute("for")
+    atrlabeldni.value = "dni"
+    labeldni.setAttributeNode(atrlabeldni)
+    
     formulario.appendChild(labeldni)
 
+    
     var inputDNI = document.createElement("input")
     
     inputDNI.type = "text"
+    inputDNI.id = "dni"
     //inputDNI.name = "labdni"                                                         
     inputDNI.placeholder = "Escribe aquí :"
     formulario.appendChild(inputDNI)
 
     var br = document.createElement("br")
     formulario.appendChild(br)
+    var br = document.createElement("br")
+    formulario.appendChild(br)
 
     var labelnombre= document.createElement("label")
+
     var nombretxt = document.createTextNode("Nombre :")
     labelnombre.appendChild(nombretxt)
+    
+    var atrlabelnombre = document.createAttribute("for")
+    atrlabelnombre.value = "nombre"
+    labelnombre.setAttributeNode(atrlabelnombre)
+    
     formulario.appendChild(labelnombre)
 
     var inputNombre = document.createElement("input")
     
-    inputNombre.type = "text"                                                          
+    inputNombre.type = "text"
+    inputNombre.id = "nombre"                                                          
     inputNombre.placeholder = "Escribe aquí :"
     formulario.appendChild(inputNombre)
 
 
+    var br = document.createElement("br")
+    formulario.appendChild(br)
     var br = document.createElement("br")
     formulario.appendChild(br)
 
@@ -299,31 +317,48 @@ function listarPeliculas(){
     var labelapellido1= document.createElement("label")
     var apellido1txt = document.createTextNode("Primer apellido :")
     labelapellido1.appendChild(apellido1txt)
+
+    var atrlabelapellido1 = document.createAttribute("for")
+    atrlabelapellido1.value = "apellido1"
+    labelapellido1.setAttributeNode(atrlabelapellido1)
+
     formulario.appendChild(labelapellido1)
 
     var inputApellido1 = document.createElement("input")
     
-    inputApellido1.type = "text"                                                          
+    inputApellido1.type = "text"
+    inputApellido1.id = "apellido1"                                                          
     inputApellido1.placeholder = "Escribe aquí :"
     formulario.appendChild(inputApellido1)
 
     var br = document.createElement("br")
     formulario.appendChild(br)
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
 
 
 
     var labelapellido2= document.createElement("label")
     var apellido2txt = document.createTextNode("Segundo apellido :")
     labelapellido2.appendChild(apellido2txt)
+
+    var atrlabelapellido2 = document.createAttribute("for")
+    atrlabelapellido2.value = "apellido2"
+    labelapellido2.setAttributeNode(atrlabelapellido2)
+
     formulario.appendChild(labelapellido2)
 
 
     var inputApellido2 = document.createElement("input")
     
-    inputApellido2.type = "text"                                                          
+    inputApellido2.type = "text"
+    inputApellido2.id = "apellido2"                                                           
     inputApellido2.placeholder = "Escribe aquí :"
     formulario.appendChild(inputApellido2)
 
+    var br = document.createElement("br")
+    formulario.appendChild(br)
     var br = document.createElement("br")
     formulario.appendChild(br)
 
@@ -332,33 +367,105 @@ function listarPeliculas(){
     var labeldireccion= document.createElement("label")
     var direcciontxt = document.createTextNode("Dirección :")
     labeldireccion.appendChild(direcciontxt)
+
+    var atrlabeldireccion = document.createAttribute("for")
+    atrlabeldireccion.value = "direccion"
+    labeldireccion.setAttributeNode(atrlabeldireccion)
+
     formulario.appendChild(labeldireccion)
 
     var inputDireccion = document.createElement("input")
     
-    inputDireccion.type = "text"                                                          
+    inputDireccion.type = "text"
+    inputDireccion.id = "direccion"                                                           
     inputDireccion.placeholder = "Escribe aquí :"
     formulario.appendChild(inputDireccion)
 
     var br = document.createElement("br")
     formulario.appendChild(br)
-
+    var br = document.createElement("br")
+    formulario.appendChild(br)
 
 
     var labeltelefono= document.createElement("label")
     var telefonotxt = document.createTextNode("Teléfono :")
     labeltelefono.appendChild(telefonotxt)
+    
+    var atrlabeltelefono = document.createAttribute("for")
+    atrlabeltelefono.value = "telefono"
+    labeltelefono.setAttributeNode(atrlabeltelefono)
+
     formulario.appendChild(labeltelefono)
     
 
     var inputTelefono = document.createElement("input")
     
-    inputTelefono.type = "number"                                                          
+    inputTelefono.type = "number"
+    inputTelefono.id = "telefono"                                                           
     inputTelefono.placeholder = "Escribe aquí :"
     formulario.appendChild(inputTelefono)
 
     var br = document.createElement("br")
     formulario.appendChild(br)
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+    var labelheroefav = document.createElement("label")
+    var txtheroefav = document.createTextNode("Elige tu superheroe favorito de entre estos 6")
+    labelheroefav.appendChild(txtheroefav)
+    formulario.appendChild(labelheroefav)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+    var inputheroe1 = document.createElement("input")
+    inputheroe1.type = "radio"
+    inputheroe1.id = "spiderman"
+    inputheroe1.name = "heroe"
+    inputheroe1.value = "spiderman"
+
+    var txtinputheroe1 = document.createTextNode("Spiderman")
+    inputheroe1.appendChild(txtinputheroe1)
+    
+    formulario.appendChild(inputheroe1)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+    var inputheroe2 = document.createElement("input")
+    inputheroe2.type = "radio"
+    inputheroe2.id = "thor"
+    inputheroe2.name = "heroe"
+    inputheroe2.value = "thor"
+
+    var txtinputheroe2 = document.createTextNode("Thor")
+    inputheroe2.appendChild(txtinputheroe2)
+    
+    formulario.appendChild(inputheroe2)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+    var inputheroe3 = document.createElement("input")
+    
+  
+    inputheroe3.type = "radio"
+    inputheroe3.id = "hulk"
+    inputheroe3.name = "heroe"
+    inputheroe3.value = "hulk"
+
+    var txtinputheroe3 = document.createTextNode("Hulk")
+    inputheroe3.appendChild(txtinputheroe3)
+    
+    formulario.appendChild(inputheroe3)
+
+
+
+
+
+
+
+    
    
 
     
