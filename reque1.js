@@ -220,7 +220,7 @@ function listarPeliculas(){
    
     
 
-    var p2 = document.createElement ("p")
+    var p2 = document.createElement ("h2")
     p2.id = "p2"
 
     var p2contenido = document.createTextNode("Si estás interesado en asistir a la convención de actores de doblaje, rellene el siguiente formulario:")
@@ -429,6 +429,11 @@ function listarPeliculas(){
     
     formulario.appendChild(inputheroe1)
 
+    var labelheroe1 = document.createElement("label")
+    var txtlabelheroe1 = document.createTextNode("Spiderman")
+    labelheroe1.appendChild(txtlabelheroe1)
+    formulario.appendChild(labelheroe1)
+
     var br = document.createElement("br")
     formulario.appendChild(br)
 
@@ -442,6 +447,11 @@ function listarPeliculas(){
     inputheroe2.appendChild(txtinputheroe2)
     
     formulario.appendChild(inputheroe2)
+
+    var labelheroe2 = document.createElement("label")
+    var txtlabelheroe2 = document.createTextNode("Thor")
+    labelheroe2.appendChild(txtlabelheroe2)
+    formulario.appendChild(labelheroe2)
 
     var br = document.createElement("br")
     formulario.appendChild(br)
@@ -458,6 +468,80 @@ function listarPeliculas(){
     inputheroe3.appendChild(txtinputheroe3)
     
     formulario.appendChild(inputheroe3)
+
+
+    var labelheroe3 = document.createElement("label")
+    var txtlabelheroe3 = document.createTextNode("Hulk")
+    labelheroe3.appendChild(txtlabelheroe3)
+    formulario.appendChild(labelheroe3)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+
+    var inputheroe4 = document.createElement("input")
+    
+  
+    inputheroe4.type = "radio"
+    inputheroe4.id = "deadpool"
+    inputheroe4.name = "heroe"
+    inputheroe4.value = "deadpool"
+
+    var txtinputheroe4 = document.createTextNode("Deadpool")
+    inputheroe4.appendChild(txtinputheroe4)
+    
+    formulario.appendChild(inputheroe4)
+
+    var labelheroe4 = document.createElement("label")
+    var txtlabelheroe4 = document.createTextNode("Deadpool")
+    labelheroe4.appendChild(txtlabelheroe4)
+    formulario.appendChild(labelheroe4)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+
+    var inputheroe5 = document.createElement("input")
+    
+  
+    inputheroe5.type = "radio"
+    inputheroe5.id = "ironMan"
+    inputheroe5.name = "heroe"
+    inputheroe5.value = "ironman"
+
+    var txtinputheroe5 = document.createTextNode("Iron man")
+    inputheroe5.appendChild(txtinputheroe5)
+    
+    formulario.appendChild(inputheroe5)
+
+    var labelheroe5 = document.createElement("label")
+    var txtlabelheroe5 = document.createTextNode("Iron man")
+    labelheroe5.appendChild(txtlabelheroe5)
+    formulario.appendChild(labelheroe5)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+    
+
+
+    var inputheroe6 = document.createElement("input")
+    
+  
+    inputheroe6.type = "radio"
+    inputheroe6.id = "capitanAmerica"
+    inputheroe6.name = "heroe"
+    inputheroe6.value = "capitanAmerica"
+
+    var txtinputheroe6 = document.createTextNode("Capitan America")
+    inputheroe6.appendChild(txtinputheroe6)
+    
+    formulario.appendChild(inputheroe6)
+
+    var labelheroe6 = document.createElement("label")
+    var txtlabelheroe6 = document.createTextNode("Capitan America")
+    labelheroe6.appendChild(txtlabelheroe6)
+    formulario.appendChild(labelheroe6)
+
 
 
 
