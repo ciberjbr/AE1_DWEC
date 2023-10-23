@@ -261,19 +261,33 @@ function listarPeliculas(){
     
 
     
+
+
+    var labeldni= document.createElement("label")
+    //labeldni.form = "labdni"
+    var dnitxt = document.createTextNode("DNI :")
+    labeldni.appendChild(dnitxt)
+    formulario.appendChild(labeldni)
+
     var inputDNI = document.createElement("input")
     
-    inputDNI.type = "text"                                                          
-    inputDNI.placeholder = "DNI :"
+    inputDNI.type = "text"
+    //inputDNI.name = "labdni"                                                         
+    inputDNI.placeholder = "Escribe aquí :"
     formulario.appendChild(inputDNI)
 
     var br = document.createElement("br")
     formulario.appendChild(br)
 
+    var labelnombre= document.createElement("label")
+    var nombretxt = document.createTextNode("Nombre :")
+    labelnombre.appendChild(nombretxt)
+    formulario.appendChild(labelnombre)
+
     var inputNombre = document.createElement("input")
     
     inputNombre.type = "text"                                                          
-    inputNombre.placeholder = "Nombre :"
+    inputNombre.placeholder = "Escribe aquí :"
     formulario.appendChild(inputNombre)
 
 
@@ -281,37 +295,66 @@ function listarPeliculas(){
     formulario.appendChild(br)
 
 
+
+    var labelapellido1= document.createElement("label")
+    var apellido1txt = document.createTextNode("Primer apellido :")
+    labelapellido1.appendChild(apellido1txt)
+    formulario.appendChild(labelapellido1)
+
     var inputApellido1 = document.createElement("input")
     
     inputApellido1.type = "text"                                                          
-    inputApellido1.placeholder = "Apellido1:"
+    inputApellido1.placeholder = "Escribe aquí :"
     formulario.appendChild(inputApellido1)
 
     var br = document.createElement("br")
     formulario.appendChild(br)
 
+
+
+    var labelapellido2= document.createElement("label")
+    var apellido2txt = document.createTextNode("Segundo apellido :")
+    labelapellido2.appendChild(apellido2txt)
+    formulario.appendChild(labelapellido2)
+
+
     var inputApellido2 = document.createElement("input")
     
     inputApellido2.type = "text"                                                          
-    inputApellido2.placeholder = "Apellido2 :"
+    inputApellido2.placeholder = "Escribe aquí :"
     formulario.appendChild(inputApellido2)
 
     var br = document.createElement("br")
     formulario.appendChild(br)
 
+
+
+    var labeldireccion= document.createElement("label")
+    var direcciontxt = document.createTextNode("Dirección :")
+    labeldireccion.appendChild(direcciontxt)
+    formulario.appendChild(labeldireccion)
+
     var inputDireccion = document.createElement("input")
     
     inputDireccion.type = "text"                                                          
-    inputDireccion.placeholder = "Direccion:"
+    inputDireccion.placeholder = "Escribe aquí :"
     formulario.appendChild(inputDireccion)
 
     var br = document.createElement("br")
     formulario.appendChild(br)
 
+
+
+    var labeltelefono= document.createElement("label")
+    var telefonotxt = document.createTextNode("Teléfono :")
+    labeltelefono.appendChild(telefonotxt)
+    formulario.appendChild(labeltelefono)
+    
+
     var inputTelefono = document.createElement("input")
     
     inputTelefono.type = "number"                                                          
-    inputTelefono.placeholder = "telefono :"
+    inputTelefono.placeholder = "Escribe aquí :"
     formulario.appendChild(inputTelefono)
 
     var br = document.createElement("br")
