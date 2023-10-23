@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Pedido de Pizza</title>
+    <LINK REL=StyleSheet HREF="Pizza_css.css" TYPE="text/css" > 
+    
+    
+    
+</head>
+<body>
+ <fieldset>
+   <legend><h1><B>Pedido de Pizza</B></h1>  </legend>
+    
+    <form id="pedido-form" >
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required><br><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required><br><br>
+
+        <label>Tamaño de la Pizza:</label><br>
+        <input type="radio" id="pequena" name="tamano" value="pequena" required>5€ <br>
+        <label for="pequena">Pequeña</label><br>
+        <input type="radio" id="mediana" name="tamano" value="mediana" required>10€ <br>
+        <label for="mediana">Mediana</label><br>
+        <input type="radio" id="grande" name="tamano" value="grande" required>15€ <br>
+        <label for="grande">Grande</label><br><br>
+
+        <label>Ingredientes:</label><br>
+        <input type="checkbox" id="jamon" name="ingredientes[]" value="jamon">
+        <label for="jamon">Jamón</label><br>
+        <input type="checkbox" id="queso" name="ingredientes[]" value="queso">
+        <label for="queso">Queso</label><br>
+        <input type="checkbox" id="champinones" name="ingredientes[]" value="champinones">
+        <label for="champinones">Champiñones</label><br>
+        <input type="checkbox" id="aceitunas" name="ingredientes[]" value="aceitunas">
+        <label for="aceitunas">Aceitunas</label><br><br>
+
+        <input type="button" class="boton" value="Procesar Pedido" onclick="calcularPrecio()">
+    </form>
+ </fieldset>
+
+    <div id="resultado"></div>
+<!--
+    <script>
+        function calcularPrecio() {
+            const formulario = document.getElementById("pedido-form");
+            const nombre = formulario.elements.nombre.value;
+            const direccion = formulario.elements.direccion.value;
+            const telefono = formulario.elements.telefono.value;
+            const email = formulario.elements.email.value;
+            const tamano = formulario.elements.tamano.value;
+            const ingredientes = formulario.elements['ingredientes[]'];
+
+            let precioBase = 0;
+
+            switch (tamano) {
+                case "pequena":
+                    precioBase = 5;
+                    break;
+                case "mediana":
+                    precioBase = 10;
+                    break;
+                case "grande":
+                    precioBase = 15;
+                    break;
+            }
+
+            let precioIngredientes = 0;
+
+            for (let i = 0; i < ingredientes.length; i++) {
+                if (ingredientes[i].checked) {
+                    precioIngredientes += 1;
+                }
+            }
+
+            if (precioBase === 0) {
+                alert("Debes seleccionar un tamaño de pizza.");
+                return;
+            }
+
+            if (precioIngredientes === 0) {
+                alert("Debes seleccionar al menos un ingrediente.");
+                return;
+            }
+
+            const precioTotal = precioBase + precioIngredientes;
+            //no se si sacar solo el precio total 
+            document.getElementById("resultado").innerHTML = `Tamaño: ${tamano}<br>Ingredientes: ${precioIngredientes}€<br>Precio total: ${precioTotal}€`;
+        }     
+    </script>-->
+    <script src="Requerimiento_2_Estefania.js"></script>
+</body>
+</html>
