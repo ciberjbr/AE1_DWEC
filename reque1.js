@@ -125,7 +125,7 @@ function listarPeliculas(){
     return peliculas;    
 }
 
-        function cargar() {
+        window.onload = function() {
 
 /* CREACIÓN DE NODO */
     
@@ -410,6 +410,9 @@ function listarPeliculas(){
     var br = document.createElement("br")
     formulario.appendChild(br)
 
+    
+    
+    
     var labelheroefav = document.createElement("label")
     var txtheroefav = document.createTextNode("Elige tu superheroe favorito de entre estos 6")
     labelheroefav.appendChild(txtheroefav)
@@ -541,6 +544,154 @@ function listarPeliculas(){
     var txtlabelheroe6 = document.createTextNode("Capitan America")
     labelheroe6.appendChild(txtlabelheroe6)
     formulario.appendChild(labelheroe6)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+
+
+
+    var labelvillanofav = document.createElement("label")
+    var txtvillanofav = document.createTextNode("Elige tu villano favorito de entre estos 6")
+    labelvillanofav.appendChild(txtvillanofav)
+    formulario.appendChild(labelvillanofav)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+    var inputvillano1 = document.createElement("input")
+    inputvillano1.type = "radio"
+    inputvillano1.id = "venom"
+    inputvillano1.name = "villano"
+    inputvillano1.value = "venom"
+
+    var txtinputvillano1 = document.createTextNode("Venom")
+    inputvillano1.appendChild(txtinputvillano1)
+    
+    formulario.appendChild(inputvillano1)
+
+    var labelvillano1 = document.createElement("label")
+    var txtlabelvillano1 = document.createTextNode("Venom")
+    labelvillano1.appendChild(txtlabelvillano1)
+    formulario.appendChild(labelvillano1)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+    var inputvillano2 = document.createElement("input")
+    inputvillano2.type = "radio"
+    inputvillano2.id = "loki"
+    inputvillano2.name = "villano"
+    inputvillano2.value = "loki"
+
+    var txtinputvillano2 = document.createTextNode("Loki")
+    inputvillano2.appendChild(txtinputvillano2)
+    
+    formulario.appendChild(inputvillano2)
+
+    var labelvillano2 = document.createElement("label")
+    var txtlabelvillano2 = document.createTextNode("Loki")
+    labelvillano2.appendChild(txtlabelvillano2)
+    formulario.appendChild(labelvillano2)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+    
+    var inputvillano3 = document.createElement("input")
+    
+  
+    inputvillano3.type = "radio"
+    inputvillano3.id = "thanos"
+    inputvillano3.name = "villano"
+    inputvillano3.value = "thanos"
+
+    var txtinputvillano3 = document.createTextNode("thanos")
+    inputvillano3.appendChild(txtinputvillano3)
+    
+    formulario.appendChild(inputvillano3)
+
+
+    var labelvillano3 = document.createElement("label")
+    var txtlabelvillano3 = document.createTextNode("Thanos")
+    labelvillano3.appendChild(txtlabelvillano3)
+    formulario.appendChild(labelvillano3)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+
+    var inputvillano4 = document.createElement("input")
+    
+  
+    inputvillano4.type = "radio"
+    inputvillano4.id = "galactus"
+    inputvillano4.name = "villano"
+    inputvillano4.value = "galactus"
+
+    var txtinputvillano4 = document.createTextNode("Galactus")
+    inputvillano4.appendChild(txtinputvillano4)
+    
+    formulario.appendChild(inputvillano4)
+
+    var labelvillano4 = document.createElement("label")
+    var txtlabelvillano4 = document.createTextNode("Galactus")
+    labelvillano4.appendChild(txtlabelvillano4)
+    formulario.appendChild(labelvillano4)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+
+    var inputvillano5 = document.createElement("input")
+    
+  
+    inputvillano5.type = "radio"
+    inputvillano5.id = "mandarin"
+    inputvillano5.name = "villano"
+    inputvillano5.value = "mandarin"
+
+    var txtinputvillano5 = document.createTextNode("Mandarin")
+    inputvillano5.appendChild(txtinputvillano5)
+    
+    formulario.appendChild(inputvillano5)
+
+    var labelvillano5 = document.createElement("label")
+    var txtlabelvillano5 = document.createTextNode("Mandarin")
+    labelvillano5.appendChild(txtlabelvillano5)
+    formulario.appendChild(labelvillano5)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+    
+
+
+    var inputvillano6 = document.createElement("input")
+    
+  
+    inputvillano6.type = "radio"
+    inputvillano6.id = "redSkull"
+    inputvillano6.name = "villano"
+    inputvillano6.value = "redSkull"
+
+    var txtinputvillano6 = document.createTextNode("Red Skull")
+    inputvillano6.appendChild(txtinputvillano6)
+    
+    formulario.appendChild(inputvillano6)
+
+    var labelvillano6 = document.createElement("label")
+    var txtlabelvillano6 = document.createTextNode("Red Skull")
+    labelvillano6.appendChild(txtlabelvillano6)
+    formulario.appendChild(labelvillano6)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+    
 
 
 
