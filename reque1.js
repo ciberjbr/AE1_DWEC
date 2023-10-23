@@ -151,6 +151,7 @@ function listarPeliculas(){
 
         var parrafo1 = document.createElement("p");
         parrafo1.id = "p1"
+        
 
         let atributo_parrafo1 = document.createAttribute("align")
         atributo_parrafo1.value= "center"
@@ -217,6 +218,111 @@ function listarPeliculas(){
     //div2.innerHTML = ""
 
     div_inicial.appendChild(tabla)
-    };
-//var inicio = document.getElementById("div_inicial");
+    
 
+    var p2 = document.createElement ("p")
+    p2.id = "p2"
+
+    var p2contenido = document.createTextNode("Si estás interesado en asistir a la convención de actores de doblaje, rellene el siguiente formulario:")
+    p2.appendChild(p2contenido)
+    div_inicial.appendChild(p2)
+
+
+
+
+
+
+   
+    var formulario = document.createElement("form")
+    
+    formulario.name = "formulario"
+    formulario.id = "formulario"
+    formulario.action= "UrlServidor"
+    formulario.method = "get"
+    /*
+    var atrformname = document.createAttribute("name")
+    atr.value = "formulario"
+    formulario.setAttributeNode(atrformname)
+
+       var atrformid = document.createAttribute("id")
+    atr.value = "formulario"
+    formulario.setAttributeNode(atrformid)
+
+        var atrformaction = document.createAttribute("action")
+    atr.value = "UrlServidor"
+    formulario.setAttributeNode(atrformaction)
+
+          var atrformmethod = document.createAttribute("method")
+    atr.value = "get"
+    formulario.setAttributeNode(atrformmethod) 
+    
+    */
+
+    
+
+    
+    var inputDNI = document.createElement("input")
+    
+    inputDNI.type = "text"                                                          
+    inputDNI.placeholder = "DNI :"
+    formulario.appendChild(inputDNI)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+    var inputNombre = document.createElement("input")
+    
+    inputNombre.type = "text"                                                          
+    inputNombre.placeholder = "Nombre :"
+    formulario.appendChild(inputNombre)
+
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+
+    var inputApellido1 = document.createElement("input")
+    
+    inputApellido1.type = "text"                                                          
+    inputApellido1.placeholder = "Apellido1:"
+    formulario.appendChild(inputApellido1)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+    var inputApellido2 = document.createElement("input")
+    
+    inputApellido2.type = "text"                                                          
+    inputApellido2.placeholder = "Apellido2 :"
+    formulario.appendChild(inputApellido2)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+    var inputDireccion = document.createElement("input")
+    
+    inputDireccion.type = "text"                                                          
+    inputDireccion.placeholder = "Direccion:"
+    formulario.appendChild(inputDireccion)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+
+    var inputTelefono = document.createElement("input")
+    
+    inputTelefono.type = "number"                                                          
+    inputTelefono.placeholder = "telefono :"
+    formulario.appendChild(inputTelefono)
+
+    var br = document.createElement("br")
+    formulario.appendChild(br)
+   
+
+    
+    
+    
+    div_inicial.appendChild(formulario);
+
+
+//var inicio = document.getElementById("div_inicial");
+};
