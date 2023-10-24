@@ -152,7 +152,7 @@ function crearInputDatos(){
         document.getElementById("formulario").appendChild(espacioBlanco3);
 }
 
-function crearRadioButton(){
+function crearRadioButtonHobbies(){
         //Crear nodo de tipo Element
         let radioLabel = document.createElement("label");//<label></label>
         //Crear nodo de tipo Text para el label
@@ -245,10 +245,110 @@ function crearRadioButton(){
         inputRad4.value = "bailar";
         //Añadir el nodo Element como hijo del div cuyo id = "formulario"
         document.getElementById("formulario").appendChild(inputRad4);
+
+        //ESPACIO EN BLANCO 
+        let espacioBlanco4 = document.createElement("br");//<br>
+        document.getElementById("formulario").appendChild(espacioBlanco4);
 }
 
+function crearRadioButtonGenero(){
+        //Crear nodo de tipo Element
+        let radioLabel = document.createElement("label");//<label></label>
+        //Crear nodo de tipo Text para el label
+        let contentLRadio = document.createTextNode("Qué género tienes: ");
+        //Añadir el nodo Text como hijo del nodo Element
+        radioLabel.appendChild(contentLRadio);//<label>Qué género tienes:  </label>
+        //Añadir el nodo Element como hijo del div cuyo id = "formulario"
+        document.getElementById("formulario").appendChild(radioLabel);
 
+        //ESPACIO EN BLANCO 
+        let espacioBlanco = document.createElement("br");//<br>
+        document.getElementById("formulario").appendChild(espacioBlanco);
 
+        // Crear nodo de tipo Element
+        let parrafoI1 = document.createElement("p");//<p></p>
+        // Crear nodo de tipo Text
+        let contenido1 = document.createTextNode("Hombre");//Hombre
+        // Añadir el nodo Text como hijo del nodo Element
+        parrafoI1.appendChild(contenido1);//<p id="parrafo1">Hombre</p>
+        document.getElementById("formulario").appendChild(parrafoI1);
+
+        //Crear nodos de tipo Element
+        let inputRad1 = document.createElement("input");//<input></input>
+        //Añadir atributos a los input
+        inputRad1.type = "radio";
+        inputRad1.name = "genero";
+        inputRad1.value = "hombre";
+        //Añadir el nodo Element como hijo del div cuyo id = "formulario"
+        document.getElementById("formulario").appendChild(inputRad1);
+
+        //ESPACIO EN BLANCO
+        let espacioBlanco1 = document.createElement("br");//<br>
+        document.getElementById("formulario").appendChild(espacioBlanco1);
+
+        // Crear nodo de tipo Element
+        let parrafoI2 = document.createElement("p");//<p></p>
+        // Crear nodo de tipo Text
+        let contenido2 = document.createTextNode("Mujer");//Mujer
+        // Añadir el nodo Text como hijo del nodo Element
+        parrafoI2.appendChild(contenido2);//<p id="parrafo1">Mujer</p>
+        document.getElementById("formulario").appendChild(parrafoI2);
+
+        //Crear nodos de tipo Element
+        let inputRad2 = document.createElement("input");//<input></input>
+        //Añadir atributos a los input
+        inputRad2.type = "radio";
+        inputRad2.name = "genero";
+        inputRad2.value = "mujer";
+        //Añadir el nodo Element como hijo del div cuyo id = "formulario"
+        document.getElementById("formulario").appendChild(inputRad2);
+
+        //ESPACIO EN BLANCO
+        let espacioBlanco2 = document.createElement("br");//<br>
+        document.getElementById("formulario").appendChild(espacioBlanco2);
+
+        // Crear nodo de tipo Element
+        let parrafoI3 = document.createElement("p");//<p></p>
+        // Crear nodo de tipo Text
+        let contenido3 = document.createTextNode("No binario");//No binario
+        // Añadir el nodo Text como hijo del nodo Element
+        parrafoI3.appendChild(contenido3);//<p id="parrafo1">No binario</p>
+        document.getElementById("formulario").appendChild(parrafoI3);
+
+        //Crear nodos de tipo Element
+        let inputRad3 = document.createElement("input");//<input></input>
+        //Añadir atributos a los input
+        inputRad3.type = "radio";
+        inputRad3.name = "genero";
+        inputRad3.value = "nobinario";
+        //Añadir el nodo Element como hijo del div cuyo id = "formulario"
+        document.getElementById("formulario").appendChild(inputRad3);
+
+        //ESPACIO EN BLANCO
+        let espacioBlanco3 = document.createElement("br");//<br>
+        document.getElementById("formulario").appendChild(espacioBlanco3);
+
+        // Crear nodo de tipo Element
+        let parrafoI4 = document.createElement("p");//<p></p>
+        // Crear nodo de tipo Text
+        let contenido4 = document.createTextNode("NS/NC");//NS/NC
+        // Añadir el nodo Text como hijo del nodo Element
+        parrafoI4.appendChild(contenido4);//<p id="parrafo1">NS/NC</p>
+        document.getElementById("formulario").appendChild(parrafoI4);
+
+        //Crear nodos de tipo Element
+        let inputRad4 = document.createElement("input");//<input></input>
+        //Añadir atributos a los input
+        inputRad4.type = "radio";
+        inputRad4.name = "genero";
+        inputRad4.value = "nose";
+        //Añadir el nodo Element como hijo del div cuyo id = "formulario"
+        document.getElementById("formulario").appendChild(inputRad4);
+
+        //ESPACIO EN BLANCO
+        let espacioBlanco4 = document.createElement("br");//<br>
+        document.getElementById("formulario").appendChild(espacioBlanco4);
+}
 
 
 
@@ -260,7 +360,8 @@ window.onload = function (){
     crearTitulo()
     crearFormulario()
     crearInputDatos()
-    crearRadioButton()
+    crearRadioButtonHobbies()
+    crearRadioButtonGenero()
     //createElementAndAppend();
 
 }
