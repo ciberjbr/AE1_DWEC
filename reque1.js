@@ -4,22 +4,22 @@ function listarPeliculas(){
     let peliculas = [ 
         { pelicula   : 'Spiderman',
         personaje : 'Spiderman',
-        actor   : 'Peter Parker' },
-        { pelicula   : 'Die Hard',
-        personaje : 'John McTiernan',
-        actor  : 'Accion' },
-        { pelicula   : '2001',
-        personaje : 'Stanley Kubrik',
-        actor  : 'CiFi' },
-        { pelicula   : 'Don erre que erre',
-        personaje : 'José Luis Sáenz de Heredia',
-        actor   : 'Comedia' },
-        { pelicula   : 'Alien',
-        personaje : 'Ridley Scott',
-        actor   : 'CiFi' },
-        { pelicula   : 'Die Hard',
-        personaje : 'John McTiernan',
-        actor  : 'Accion' },
+        actor   : 'Spiderman' },
+        { pelicula   : 'Thor',
+        personaje : 'Thor',
+        actor  : 'Thor' },
+        { pelicula   : 'Hulk',
+        personaje : 'Hulk',
+        actor  : 'Hulk' },
+        { pelicula   : 'Deadpool',
+        personaje : 'Deadpool',
+        actor   : 'Deadpool' },
+        { pelicula   : 'Iron man',
+        personaje : 'Iron man',
+        actor   : 'Iron man' },
+        { pelicula   : 'Capitan America',
+        personaje : 'Capitan America',
+        actor  : 'Capitan America' },
         { pelicula   : '2001',
         personaje : 'Stanley Kubrik',
         actor  : 'CiFi' },
@@ -133,9 +133,9 @@ function listarPeliculas(){
         var encabezado = document.createElement("h1");//<h1></h1>
         encabezado.id = "titulo" //<p id="encabezado"></p>
         
-        let atributo_encabezado = document.createAttribute("align")
-        atributo_encabezado.value = "center"
-        encabezado.setAttributeNode(atributo_encabezado)
+        //let atributo_encabezado = document.createAttribute("align")
+        //atributo_encabezado.value = "center"
+        //encabezado.setAttributeNode(atributo_encabezado)
         
         // Crear nodo de tipo Text
         var contenido_encabezado = document.createTextNode("Bienvenidos a la convención de actores de doblaje de Marvel!");//Hola Mundo!
@@ -149,7 +149,7 @@ function listarPeliculas(){
         /* BORRADO DE NODO */
         //enlace.parentNode.removeChild(enlace);
 
-        var parrafo1 = document.createElement("p");
+        var parrafo1 = document.createElement("h3");
         parrafo1.id = "p1"
         
 
@@ -237,7 +237,7 @@ function listarPeliculas(){
     
     formulario.name = "formulario"
     formulario.id = "formulario"
-    formulario.action= "UrlServidor"
+    formulario.action= "Enviando datos a UrlServidor"
     formulario.method = "get"
     /*
     var atrformname = document.createAttribute("name")
@@ -417,7 +417,8 @@ function listarPeliculas(){
     
     
     
-    var labelheroefav = document.createElement("h3")
+    var labelheroefav = document.createElement("label")
+    labelheroefav.className="minititulo"
     var txtheroefav = document.createTextNode("Elige tu superheroe favorito de entre estos 6")
     labelheroefav.appendChild(txtheroefav)
     formulario.appendChild(labelheroefav)
@@ -560,7 +561,8 @@ function listarPeliculas(){
     formulario.appendChild(imagenvillanos)
 
 
-    var labelvillanofav = document.createElement("h3")
+    var labelvillanofav = document.createElement("label")
+    labelvillanofav.className="minititulo"
     var txtvillanofav = document.createTextNode("Elige tu villano favorito de entre estos 6")
     labelvillanofav.appendChild(txtvillanofav)
     formulario.appendChild(labelvillanofav)
@@ -699,7 +701,9 @@ function listarPeliculas(){
 
 
     
-    var txtcheckboxes = document.createElement("h3")
+    var txtcheckboxes = document.createElement("label")
+    txtcheckboxes.className="minititulo"
+
     var contenidoCheckboxes = document.createTextNode("Marque las casillas que le correspondan")
     txtcheckboxes.appendChild(contenidoCheckboxes)
     formulario.appendChild(txtcheckboxes)
@@ -796,7 +800,7 @@ function listarPeliculas(){
 
 
     var labelselect = document.createElement("label")
-    
+    labelselect.className = "minititulo"
 
     var txtlabelselect = document.createTextNode("Seleccione el día de la semana en el que usted vendrá")
     labelselect.appendChild(txtlabelselect)
@@ -856,6 +860,7 @@ function listarPeliculas(){
 
 
     var labeltextarea = document.createElement("label")
+    labeltextarea.className = "minititulo"
     var txtlabeltextarea = document.createTextNode("Observaciones:")
     labeltextarea.appendChild(txtlabeltextarea)
     formulario.appendChild(labeltextarea)
@@ -864,10 +869,23 @@ function listarPeliculas(){
     formulario.appendChild(br)
 
     var observaciones = document.createElement("textarea")
+    observaciones.id = "cajaobservaciones"
     observaciones.rows = "5"
     observaciones.cols = "80"
-    observaciones.style = "resize: none;"
+
     formulario.appendChild(observaciones)
+
+    var enviar = document.createElement("input")
+    enviar.type = "submit"
+    enviar.value = "Enviar Formulario"
+    enviar.id = "enviarDatos"
+    formulario.appendChild(enviar)
+
+    var limpiar = document.createElement("input")
+    limpiar.type = "reset"
+    limpiar.value = "limpiar formulario"
+    limpiar.id = "limpiarDatos"
+    formulario.appendChild(limpiar)
     
 
 
