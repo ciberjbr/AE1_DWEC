@@ -350,6 +350,63 @@ function crearRadioButtonGenero(){
         document.getElementById("formulario").appendChild(espacioBlanco4);
 }
 
+function crearCheckbox(){
+        //Crear nodo de tipo Element
+        let radioLabel = document.createElement("label");//<label></label>
+        //Crear nodo de tipo Text para el label
+        let contentLRadio = document.createTextNode("Peliculas favoritas: ");
+        //Añadir el nodo Text como hijo del nodo Element
+        radioLabel.appendChild(contentLRadio);//<label>Peliculas favoritas:  </label>
+        //Añadir el nodo Element como hijo del div cuyo id = "formulario"
+        document.getElementById("formulario").appendChild(radioLabel);
+
+        //ESPACIO EN BLANCO 
+        let espacioBlanco = document.createElement("br");//<br>
+        document.getElementById("formulario").appendChild(espacioBlanco);
+
+        // Crear nodo de tipo Element
+        let parrafoI1 = document.createElement("p");//<p></p>
+        // Crear nodo de tipo Text
+        let contenido1 = document.createTextNode("Cualquiera de Studio Ghibli");
+        // Añadir el nodo Text como hijo del nodo Element
+        parrafoI1.appendChild(contenido1);
+        document.getElementById("formulario").appendChild(parrafoI1);
+
+        //Crear nodos de tipo Element
+        let inputCheck1 = document.createElement("input");//<input></input>
+        //Añadir atributos a los input
+        inputCheck1.type = "checkbox";
+        inputCheck1.name = "peliculas";
+        inputCheck1.value = "ghibli";
+        //Añadir el nodo Element como hijo del div cuyo id = "formulario"
+        document.getElementById("formulario").appendChild(inputCheck1);
+
+        //ESPACIO EN BLANCO
+        let espacioBlanco1 = document.createElement("br");//<br>
+        document.getElementById("formulario").appendChild(espacioBlanco1);
+
+        // Crear nodo de tipo Element
+        let parrafoI2 = document.createElement("p");//<p></p>
+        // Crear nodo de tipo Text
+        let contenido2 = document.createTextNode("Cualquiera de Disney");
+        // Añadir el nodo Text como hijo del nodo Element
+        parrafoI2.appendChild(contenido2);
+        document.getElementById("formulario").appendChild(parrafoI2);
+
+        //Crear nodos de tipo Element
+        let inputCheck2 = document.createElement("input");//<input></input>
+        //Añadir atributos a los input
+        inputCheck2.type = "checkbox";
+        inputCheck2.name = "peliculas";
+        inputCheck2.value = "disney";
+        //Añadir el nodo Element como hijo del div cuyo id = "formulario"
+        document.getElementById("formulario").appendChild(inputCheck2);
+
+        //ESPACIO EN BLANCO
+        let espacioBlanco2 = document.createElement("br");//<br>
+        document.getElementById("formulario").appendChild(espacioBlanco2);
+}
+
 
 
 
@@ -362,6 +419,6 @@ window.onload = function (){
     crearInputDatos()
     crearRadioButtonHobbies()
     crearRadioButtonGenero()
-    //createElementAndAppend();
+    crearCheckbox()
 
 }
