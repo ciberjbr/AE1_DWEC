@@ -21,19 +21,35 @@ calculándolo en base a los siguientes parámetros:
 Cada ingrediente elegido tendrá un valor de 1€
 */
 
-var formulario = document.getElementById("formPedido");
+//var formulario = document.getElementById("formPedido");
 
-function elegirTamano(){
-
-}
-
-function elegirIngrediente(){
-
-}
-
-function calcularPrecio(){
+window.onload = function (){
     
+    function muestraMensaje() {
+        console.log('Gracias por pinchar en la función con el ejemplo semantico');
+    }
+    
+    //Ponemos el script despues de crear el boton ya que si lo ponemos antes, el id del elemento 
+    //no se habría creado.
+    //document.getElementById("boton").onclick = muestraMensaje;mediante el DOM asignamos el onlclick
+                                                                //y le asingamos la funcion que queremos ejecutar
+    //recordemos que tambien se crea una variable por cada ID
+    //mas sencillo que lo de arriba y equivalente
+    boton.onclick = muestraMensaje;
+
 }
+
+
+/*
+function calcularPrecio(){
+    var formulario = document.getElementById("formPedido");
+    //primero acceder al formulario y acceder al tamaño elegido
+    //acceder al checkbox para saber cuantos ingredientes ha elegido y sumarlo
+    //onsubmit, al pulsar el botón "Procesar pedido" es cuando nos dice si falta alguna selección y si no hace la suma
+
+}*/
+
+
 
 /*function calcularPrecio() {
     const formulario = document.getElementById("pedido-form");
