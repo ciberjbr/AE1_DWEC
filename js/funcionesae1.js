@@ -15,36 +15,6 @@
         - Un campo select
         - Un text area
         */
-            /*
-            
-            var parrafo = document.createElement("p");
-            var texto = document.createTextNode("Hola Mundo!");
-            parrafo.appendChild(texto);
-            contenedor.appendChild(parrafo);
-            */
-
-
-
-function crearParrafo(){
-            // Crear nodo de tipo Element
-    let parrafo = document.createElement("p");//<p></p>
-            
-            // Crear nodo de tipo Text
-    let contenido = document.createTextNode("Hola Mundo!");//Hola Mundo!
-            
-            // Añadir el nodo Text como hijo del nodo Element
-    parrafo.appendChild(contenido);//<p id="parrafo1">Hola Mundo!</p>
-
-            // Añadir el nodo Element como hijo de la pagina
-    //document.body.appendChild(parrafo);
-
-    //let contDiv = document.getElementsById("contenedor");
-    //contDiv.appendChild(parrafo);
-
-    // Añadir el nodo Element como hijo del div cuyo id = "contenedor"
-    document.getElementById("contenedor").appendChild(parrafo);
-
-}
 
 function crearTitulo(){
         //Crear nodo de tipo Element
@@ -407,7 +377,29 @@ function crearCheckbox(){
         document.getElementById("formulario").appendChild(espacioBlanco2);
 }
 
+function ponerimagen(){
+        var imagen1 = document.createElement("img")
+        imagen1.src = "../images/imagen1.jpg"
+        imagen1.alt = "imagen de monitor con lenguajes de programación"
+        formulario.appendChild(imagen1)
 
+        //ESPACIO EN BLANCO
+        let espacioBlanco = document.createElement("br");//<br>
+        document.getElementById("formulario").appendChild(espacioBlanco);
+
+        var imagen2 = document.createElement("img")
+        imagen2.src = "../images/imagen2.png"
+        imagen2.alt = "imagen de lenguajes de programación"
+        formulario.appendChild(imagen2)
+
+        //ESPACIO EN BLANCO
+        let espacioBlanco2 = document.createElement("br");//<br>
+        document.getElementById("formulario").appendChild(espacioBlanco2);
+}
+
+function crearCampoSelect(){
+        
+}
 
 
 
@@ -420,5 +412,5 @@ window.onload = function (){
     crearRadioButtonHobbies()
     crearRadioButtonGenero()
     crearCheckbox()
-
+    ponerimagen()
 }
