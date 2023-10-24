@@ -377,7 +377,7 @@ function crearCheckbox(){
         formulario.appendChild(espacioBlanco2);
 }
 
-function ponerimagen(){
+function ponerImagen(){
         let imagen1 = document.createElement("img")
         imagen1.src = "../images/imagen1.jpg"
         imagen1.alt = "imagen de monitor con lenguajes de programación"
@@ -452,10 +452,48 @@ function crearCampoSelect(){
 
         //Añadir el nodo Element como hijo del div cuyo id = "formulario"
         formulario.appendChild(select1)
+
+        //ESPACIO EN BLANCO
+        let espacioBlanco = document.createElement("br");//<br>
+        formulario.appendChild(espacioBlanco);
 }
 
 function crearTextArea(){
+        //Label del textArea
+        var labelTextArea = document.createElement("label")
+        labelTextArea.className = "minititulo"
+        var txtLabel = document.createTextNode("Observaciones: ")
+        labelTextArea.appendChild(txtLabel)
+        formulario.appendChild(labelTextArea)
+
+        //ESPACIO EN BLANCO
+        let espacioBlanco = document.createElement("br");//<br>
+        formulario.appendChild(espacioBlanco);
+
+        var observaciones = document.createElement("textarea")
+        observaciones.id = "cajaobservaciones"
+        observaciones.rows = "5"
+        observaciones.cols = "80"
+
+        formulario.appendChild(observaciones)
+
+        //ESPACIO EN BLANCO
+        let espacioBlanco1 = document.createElement("br");//<br>
+        formulario.appendChild(espacioBlanco1);
+}
+
+function crearBotones(){
+        var enviar = document.createElement("input")
+        enviar.type = "submit"
+        enviar.value = "Enviar formulario"
+        enviar.id = "enviarDatos"
+        formulario.appendChild(enviar)
         
+        var limpiar = document.createElement("input")
+        limpiar.type = "reset"
+        limpiar.value = "Limpiar formulario"
+        limpiar.id = "limpiarDatos"
+        formulario.appendChild(limpiar)
 }
 
 //WINDOW.ONLOAD
@@ -466,7 +504,8 @@ window.onload = function (){
     crearRadioButtonHobbies()
     crearRadioButtonGenero()
     crearCheckbox()
-    ponerimagen()
+    ponerImagen()
     crearCampoSelect()
     crearTextArea()
+    crearBotones()
 }
