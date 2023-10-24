@@ -36,18 +36,33 @@ window.onload = function (){
     //recordemos que tambien se crea una variable por cada ID
     //mas sencillo que lo de arriba y equivalente
     boton.onclick = muestraMensaje;
-
 }
 
 
-/*
+
 function calcularPrecio(){
-    var formulario = document.getElementById("formPedido");
+    const formulario = document.getElementById("formPedido");
+    const tamanoPizza = formulario.elements.tamano.value;
+
+    console.log (tamanoPizza);
+    switch (tamanoPizza) {
+        case "pequena":
+            precioBase = 5;
+            break;
+        case "mediana":
+            precioBase = 10;
+            break;
+        case "grande":
+            precioBase = 15;
+            break;
+    }
+
+    boton.onclick = muestraMensaje;
     //primero acceder al formulario y acceder al tamaño elegido
     //acceder al checkbox para saber cuantos ingredientes ha elegido y sumarlo
     //onsubmit, al pulsar el botón "Procesar pedido" es cuando nos dice si falta alguna selección y si no hace la suma
 
-}*/
+}
 
 
 
