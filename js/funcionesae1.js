@@ -229,11 +229,11 @@ function crearRadioButtonGenero(){
         //Añadir el nodo Text como hijo del nodo Element
         radioLabel.appendChild(contentLRadio);//<label>Qué género tienes:  </label>
         //Añadir el nodo Element como hijo del div cuyo id = "formulario"
-        document.getElementById("formulario").appendChild(radioLabel);
+        formulario.appendChild(radioLabel);
 
         //ESPACIO EN BLANCO 
         let espacioBlanco = document.createElement("br");//<br>
-        document.getElementById("formulario").appendChild(espacioBlanco);
+        formulario.appendChild(espacioBlanco);
 
         // Crear nodo de tipo Element
         let parrafoI1 = document.createElement("p");//<p></p>
@@ -241,7 +241,7 @@ function crearRadioButtonGenero(){
         let contenido1 = document.createTextNode("Hombre");//Hombre
         // Añadir el nodo Text como hijo del nodo Element
         parrafoI1.appendChild(contenido1);//<p id="parrafo1">Hombre</p>
-        document.getElementById("formulario").appendChild(parrafoI1);
+        formulario.appendChild(parrafoI1);
 
         //Crear nodos de tipo Element
         let inputRad1 = document.createElement("input");//<input></input>
@@ -250,11 +250,11 @@ function crearRadioButtonGenero(){
         inputRad1.name = "genero";
         inputRad1.value = "hombre";
         //Añadir el nodo Element como hijo del div cuyo id = "formulario"
-        document.getElementById("formulario").appendChild(inputRad1);
+        formulario.appendChild(inputRad1);
 
         //ESPACIO EN BLANCO
         let espacioBlanco1 = document.createElement("br");//<br>
-        document.getElementById("formulario").appendChild(espacioBlanco1);
+        formulario.appendChild(espacioBlanco1);
 
         // Crear nodo de tipo Element
         let parrafoI2 = document.createElement("p");//<p></p>
@@ -262,7 +262,7 @@ function crearRadioButtonGenero(){
         let contenido2 = document.createTextNode("Mujer");//Mujer
         // Añadir el nodo Text como hijo del nodo Element
         parrafoI2.appendChild(contenido2);//<p id="parrafo1">Mujer</p>
-        document.getElementById("formulario").appendChild(parrafoI2);
+        formulario.appendChild(parrafoI2);
 
         //Crear nodos de tipo Element
         let inputRad2 = document.createElement("input");//<input></input>
@@ -271,11 +271,11 @@ function crearRadioButtonGenero(){
         inputRad2.name = "genero";
         inputRad2.value = "mujer";
         //Añadir el nodo Element como hijo del div cuyo id = "formulario"
-        document.getElementById("formulario").appendChild(inputRad2);
+        formulario.appendChild(inputRad2);
 
         //ESPACIO EN BLANCO
         let espacioBlanco2 = document.createElement("br");//<br>
-        document.getElementById("formulario").appendChild(espacioBlanco2);
+        formulario.appendChild(espacioBlanco2);
 
         // Crear nodo de tipo Element
         let parrafoI3 = document.createElement("p");//<p></p>
@@ -283,7 +283,7 @@ function crearRadioButtonGenero(){
         let contenido3 = document.createTextNode("No binario");//No binario
         // Añadir el nodo Text como hijo del nodo Element
         parrafoI3.appendChild(contenido3);//<p id="parrafo1">No binario</p>
-        document.getElementById("formulario").appendChild(parrafoI3);
+        formulario.appendChild(parrafoI3);
 
         //Crear nodos de tipo Element
         let inputRad3 = document.createElement("input");//<input></input>
@@ -292,11 +292,11 @@ function crearRadioButtonGenero(){
         inputRad3.name = "genero";
         inputRad3.value = "nobinario";
         //Añadir el nodo Element como hijo del div cuyo id = "formulario"
-        document.getElementById("formulario").appendChild(inputRad3);
+        formulario.appendChild(inputRad3);
 
         //ESPACIO EN BLANCO
         let espacioBlanco3 = document.createElement("br");//<br>
-        document.getElementById("formulario").appendChild(espacioBlanco3);
+        formulario.appendChild(espacioBlanco3);
 
         // Crear nodo de tipo Element
         let parrafoI4 = document.createElement("p");//<p></p>
@@ -304,7 +304,7 @@ function crearRadioButtonGenero(){
         let contenido4 = document.createTextNode("NS/NC");//NS/NC
         // Añadir el nodo Text como hijo del nodo Element
         parrafoI4.appendChild(contenido4);//<p id="parrafo1">NS/NC</p>
-        document.getElementById("formulario").appendChild(parrafoI4);
+        formulario.appendChild(parrafoI4);
 
         //Crear nodos de tipo Element
         let inputRad4 = document.createElement("input");//<input></input>
@@ -313,11 +313,11 @@ function crearRadioButtonGenero(){
         inputRad4.name = "genero";
         inputRad4.value = "nose";
         //Añadir el nodo Element como hijo del div cuyo id = "formulario"
-        document.getElementById("formulario").appendChild(inputRad4);
+        formulario.appendChild(inputRad4);
 
         //ESPACIO EN BLANCO
         let espacioBlanco4 = document.createElement("br");//<br>
-        document.getElementById("formulario").appendChild(espacioBlanco4);
+        formulario.appendChild(espacioBlanco4);
 }
 
 function crearCheckbox(){
@@ -328,11 +328,11 @@ function crearCheckbox(){
         //Añadir el nodo Text como hijo del nodo Element
         radioLabel.appendChild(contentLRadio);//<label>Peliculas favoritas:  </label>
         //Añadir el nodo Element como hijo del div cuyo id = "formulario"
-        document.getElementById("formulario").appendChild(radioLabel);
+        formulario.appendChild(radioLabel);
 
         //ESPACIO EN BLANCO 
         let espacioBlanco = document.createElement("br");//<br>
-        document.getElementById("formulario").appendChild(espacioBlanco);
+        formulario.appendChild(espacioBlanco);
 
         // Crear nodo de tipo Element
         let parrafoI1 = document.createElement("p");//<p></p>
@@ -340,7 +340,7 @@ function crearCheckbox(){
         let contenido1 = document.createTextNode("Cualquiera de Studio Ghibli");
         // Añadir el nodo Text como hijo del nodo Element
         parrafoI1.appendChild(contenido1);
-        document.getElementById("formulario").appendChild(parrafoI1);
+        formulario.appendChild(parrafoI1);
 
         //Crear nodos de tipo Element
         let inputCheck1 = document.createElement("input");//<input></input>
@@ -349,11 +349,11 @@ function crearCheckbox(){
         inputCheck1.name = "peliculas";
         inputCheck1.value = "ghibli";
         //Añadir el nodo Element como hijo del div cuyo id = "formulario"
-        document.getElementById("formulario").appendChild(inputCheck1);
+        formulario.appendChild(inputCheck1);
 
         //ESPACIO EN BLANCO
         let espacioBlanco1 = document.createElement("br");//<br>
-        document.getElementById("formulario").appendChild(espacioBlanco1);
+        formulario.appendChild(espacioBlanco1);
 
         // Crear nodo de tipo Element
         let parrafoI2 = document.createElement("p");//<p></p>
@@ -361,7 +361,7 @@ function crearCheckbox(){
         let contenido2 = document.createTextNode("Cualquiera de Disney");
         // Añadir el nodo Text como hijo del nodo Element
         parrafoI2.appendChild(contenido2);
-        document.getElementById("formulario").appendChild(parrafoI2);
+        formulario.appendChild(parrafoI2);
 
         //Crear nodos de tipo Element
         let inputCheck2 = document.createElement("input");//<input></input>
@@ -370,39 +370,93 @@ function crearCheckbox(){
         inputCheck2.name = "peliculas";
         inputCheck2.value = "disney";
         //Añadir el nodo Element como hijo del div cuyo id = "formulario"
-        document.getElementById("formulario").appendChild(inputCheck2);
+        formulario.appendChild(inputCheck2);
 
         //ESPACIO EN BLANCO
         let espacioBlanco2 = document.createElement("br");//<br>
-        document.getElementById("formulario").appendChild(espacioBlanco2);
+        formulario.appendChild(espacioBlanco2);
 }
 
 function ponerimagen(){
-        var imagen1 = document.createElement("img")
+        let imagen1 = document.createElement("img")
         imagen1.src = "../images/imagen1.jpg"
         imagen1.alt = "imagen de monitor con lenguajes de programación"
         formulario.appendChild(imagen1)
 
         //ESPACIO EN BLANCO
         let espacioBlanco = document.createElement("br");//<br>
-        document.getElementById("formulario").appendChild(espacioBlanco);
+        formulario.appendChild(espacioBlanco);
 
-        var imagen2 = document.createElement("img")
+        let imagen2 = document.createElement("img")
         imagen2.src = "../images/imagen2.png"
         imagen2.alt = "imagen de lenguajes de programación"
         formulario.appendChild(imagen2)
 
         //ESPACIO EN BLANCO
         let espacioBlanco2 = document.createElement("br");//<br>
-        document.getElementById("formulario").appendChild(espacioBlanco2);
+        formulario.appendChild(espacioBlanco2);
 }
 
 function crearCampoSelect(){
-        
+        var labelSelect = document.createElement("label")
+        labelSelect.className = "minititulo"
+
+        var txtLabelSelect = document.createTextNode("Seleccione el día de la semana en el que usted vendrá: ")
+        labelSelect.appendChild(txtLabelSelect)
+        formulario.appendChild(labelSelect)
+
+        var select1 = document.createElement("select")
+        select1.name = "diaAsistencia"
+
+        var option1 = document.createElement("option")
+        option1.value = "lunes"
+        var txtoption1 = document.createTextNode("Lunes")
+        option1.appendChild(txtoption1)
+        select1.appendChild(option1)
+
+        var option2 = document.createElement("option")
+        option2.value = "martes"
+        var txtoption2 = document.createTextNode("Martes")
+        option2.appendChild(txtoption2)
+        select1.appendChild(option2)
+
+        var option3 = document.createElement("option")
+        option2.value = "miercoles"
+        var txtoption3 = document.createTextNode("Miércoles")
+        option3.appendChild(txtoption3)
+        select1.appendChild(option3)
+
+        var option4 = document.createElement("option")
+        option4.value = "jueves"
+        var txtoption4 = document.createTextNode("Jueves")
+        option4.appendChild(txtoption4)
+        select1.appendChild(option4)
+
+        var option5 = document.createElement ("option")
+        option5.value = "viernes"
+        var txtoption5 = document.createTextNode ("Viernes")
+        option5.appendChild(txtoption5)
+        select1.appendChild(option5)
+
+        var option6 = document.createElement ("option")
+        option6.value = "sabado"
+        var txtoption6 = document.createTextNode ("Sabado")
+        option6.appendChild(txtoption6)
+        select1.appendChild(option6)
+
+        var option7 = document.createElement ("option")
+        option7.value = "domingo"
+        var txtoption7 = document.createTextNode("Domingo")
+        option7.appendChild(txtoption7)
+        select1.appendChild(option7)
+
+        //Añadir el nodo Element como hijo del div cuyo id = "formulario"
+        formulario.appendChild(select1)
 }
 
-
-
+function crearTextArea(){
+        
+}
 
 //WINDOW.ONLOAD
 window.onload = function (){
@@ -413,4 +467,6 @@ window.onload = function (){
     crearRadioButtonGenero()
     crearCheckbox()
     ponerimagen()
+    crearCampoSelect()
+    crearTextArea()
 }
