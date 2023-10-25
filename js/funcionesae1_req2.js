@@ -24,90 +24,58 @@ Cada ingrediente elegido tendrá un valor de 1€
 //var formulario = document.getElementById("formPedido");
 
 window.onload = function (){
-    
-    function muestraMensaje() {
-        console.log('Gracias por pinchar en la función con el ejemplo semantico');
-    }
-    
-    //Ponemos el script despues de crear el boton ya que si lo ponemos antes, el id del elemento 
-    //no se habría creado.
-    //document.getElementById("boton").onclick = muestraMensaje;mediante el DOM asignamos el onlclick
-                                                                //y le asingamos la funcion que queremos ejecutar
-    //recordemos que tambien se crea una variable por cada ID
-    //mas sencillo que lo de arriba y equivalente
-    boton.onclick = muestraMensaje;
-}
 
+    function calcularPrecio(){
+        //formulario es el id del form
+        let tamanoPizza = formulario.elements.tamano.value;
 
-
-function calcularPrecio(){
-    const formulario = document.getElementById("formPedido");
-    const tamanoPizza = formulario.elements.tamano.value;
-
-    console.log (tamanoPizza);
-    switch (tamanoPizza) {
-        case "pequena":
-            precioBase = 5;
-            break;
-        case "mediana":
-            precioBase = 10;
-            break;
-        case "grande":
-            precioBase = 15;
-            break;
-    }
-
-    boton.onclick = muestraMensaje;
-    //primero acceder al formulario y acceder al tamaño elegido
-    //acceder al checkbox para saber cuantos ingredientes ha elegido y sumarlo
-    //onsubmit, al pulsar el botón "Procesar pedido" es cuando nos dice si falta alguna selección y si no hace la suma
-
-}
-
-
-
-/*function calcularPrecio() {
-    const formulario = document.getElementById("pedido-form");
-    const nombre = formulario.elements.nombre.value;
-    const direccion = formulario.elements.direccion.value;
-    const telefono = formulario.elements.telefono.value;
-    const email = formulario.elements.email.value;
-    const tamano = formulario.elements.tamano.value;
-    const ingredientes = formulario.elements['ingredientes[]'];
-
-    let precioBase = 0;
-
-    switch (tamano) {
-        case "pequena":
-            precioBase = 5;
-            break;
-        case "mediana":
-            precioBase = 10;
-            break;
-        case "grande":
-            precioBase = 15;
-            break;
-    }
-
-    let precioIngredientes = 0;
-
-    for (let i = 0; i < ingredientes.length; i++) {
-        if (ingredientes[i].checked) {
-            precioIngredientes += 1;
+        //Declaramos variable precioBase de cada pizza
+        let precioBase = 0;
+        console.log (tamanoPizza);
+        switch (tamanoPizza) {
+            case "pequena":
+                precioBase = 5;
+                break;
+            case "mediana":
+                precioBase = 10;
+                break;
+            case "grande":
+                precioBase = 15;
+                break;
         }
+        console.log(precioBase);
+
+        if (precioBase === 0) {
+            alert("Debes seleccionar un tamaño de pizza.");
+            return;
+        }
+
+        //acceder al checkbox para saber cuantos ingredientes ha elegido y sumarlo
+        //let ingrediente = formulario.elements.ingredientes.value;
+        let arrayIngredientes = ["jamon", "queso", "champinones", "aceitunas"];
+        let ingredienteSeleccion = formulario.elements.ingredientes.checked;
+        let precioIngrediente = 0;
+
+        console.log(arrayIngredientes);
+        
+        for (let i = 0; i < arrayIngredientes.length; i++){
+            if (arrayIngredientes[i] == ingredienteSeleccion){
+                precioIngrediente += 1;
+            }
+        }
+        
+        if (precioIngrediente === 0) {
+            alert("Debes seleccionar al menos un ingrediente.");
+            return;
+        }
+        
+        let precioTotal = precioBase + precioIngrediente;
+        //no se si sacar solo el precio total 
+        document.getElementById("resultado").innerHTML = `Tamaño: ${tamano}<br>Ingredientes: ${precioIngredientes}€<br>Precio total: ${precioTotal}€`;
+
     }
 
-    if (precioBase === 0) {
-        alert("Debes seleccionar un tamaño de pizza.");
-        return;
-    }
-
-    if (precioIngredientes === 0) {
-        alert("Debes seleccionar al menos un ingrediente.");
-        return;
-    }
-
-    const precioTotal = precioBase + precioIngredientes;
-    //no se si sacar solo el precio total 
-    document.getElementById("resultado").innerHTML = `Tamaño: ${tamano}<br>Ingredientes: ${precioIngredientes}€<br>Precio total: ${precioTotal}€`;
-}*/
+    //onclick: al apretar el boton para nos calculará el precio
+    //boton es el id del button
+    boton.onclick = calcularPrecio;
+}

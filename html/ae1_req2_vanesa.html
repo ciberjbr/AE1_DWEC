@@ -8,7 +8,7 @@
         <!--<link rel="stylesheet" href="../css/ae1_req2_vanesa.css">-->
     </head>
     <body>
-        <form id="formPedido" >
+        <form id="formulario" >
             <fieldset>
                 <legend><h1>Pedido de Pizza</h1></legend>
                 <label for="nombre">Nombre:</label>
@@ -18,7 +18,7 @@
                 <input type="text" id="direccion" name="direccion" required><br/>
         
                 <label for="telefono">Teléfono:</label>
-                <input type="text" id="telefono" name="telefono" required><br/>
+                <input type="number" id="telefono" name="telefono" required><br/>
         
                 <label for="email">Email:</label>
                 <input type="text" id="email" name="email" required><br/>
@@ -32,13 +32,13 @@
                 <label for="grande">Grande</label><br/>
         
                 <label>Ingredientes:</label><br/>
-                <input type="checkbox" id="jamon" name="ingredientes[]" value="jamon">
+                <input type="checkbox" id="jamon" name="ingredientes" value="jamon">
                 <label for="jamon">Jamón</label><br/>
-                <input type="checkbox" id="queso" name="ingredientes[]" value="queso">
+                <input type="checkbox" id="queso" name="ingredientes" value="queso">
                 <label for="queso">Queso</label><br/>
-                <input type="checkbox" id="champinones" name="ingredientes[]" value="champinones">
+                <input type="checkbox" id="champinones" name="ingredientes" value="champinones">
                 <label for="champinones">Champiñones</label><br/>
-                <input type="checkbox" id="aceitunas" name="ingredientes[]" value="aceitunas">
+                <input type="checkbox" id="aceitunas" name="ingredientes" value="aceitunas">
                 <label for="aceitunas">Aceitunas</label><br/>
         
                 <button id="boton">Procesar pedido</button>
