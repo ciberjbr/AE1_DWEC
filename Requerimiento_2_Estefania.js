@@ -29,6 +29,12 @@ function calcularPrecio() {
         }
     }
 
+    //HE AÑADIDO ESTO PORQUE SI NO LO CALCULABA Y NOS LO DEVOLVÍA SIN PONER ESTOS DATOS
+    if (nombre == "" || direccion == "" || telefono == "" || email == ""){
+        alert("Faltan datos");
+        return;
+    }
+
     if (precioBase === 0) {
         alert("Debes seleccionar un tamaño de pizza.");
         return;
