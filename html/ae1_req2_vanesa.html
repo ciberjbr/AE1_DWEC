@@ -32,17 +32,18 @@
                 <label for="grande">Grande</label><br/>
         
                 <label>Ingredientes:</label><br/>
-                <input type="checkbox" id="jamon" name="ingredientes" value="jamon">
+                <input type="checkbox" id="jamon" name="ingredientes[]" value="jamon">
                 <label for="jamon">Jamón</label><br/>
-                <input type="checkbox" id="queso" name="ingredientes" value="queso">
+                <input type="checkbox" id="queso" name="ingredientes[]" value="queso">
                 <label for="queso">Queso</label><br/>
-                <input type="checkbox" id="champinones" name="ingredientes" value="champinones">
+                <input type="checkbox" id="champinones" name="ingredientes[]" value="champinones">
                 <label for="champinones">Champiñones</label><br/>
-                <input type="checkbox" id="aceitunas" name="ingredientes" value="aceitunas">
+                <input type="checkbox" id="aceitunas" name="ingredientes[]" value="aceitunas">
                 <label for="aceitunas">Aceitunas</label><br/>
         
                 <button id="boton">Procesar pedido</button>
             </fieldset>
-        </form> 
+        </form>
+        <div id="resultado"></div>
     </body>
 </html>

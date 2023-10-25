@@ -21,18 +21,19 @@ calculándolo en base a los siguientes parámetros:
 Cada ingrediente elegido tendrá un valor de 1€
 */
 
-//var formulario = document.getElementById("formPedido");
-
 window.onload = function (){
 
-    function calcularPrecio(){
-        //formulario es el id del form
-        let tamanoPizza = formulario.elements.tamano.value;
-
-        //Declaramos variable precioBase de cada pizza
+    function calcularPrecio() {
+        const nombre = formulario.elements.nombre.value;
+        const direccion = formulario.elements.direccion.value;
+        const telefono = formulario.elements.telefono.value;
+        const email = formulario.elements.email.value;
+        const tamano = formulario.elements.tamano.value;
+        const ingredientes = formulario.elements['ingredientes[]'];
+    
         let precioBase = 0;
-        console.log (tamanoPizza);
-        switch (tamanoPizza) {
+    
+        switch (tamano) {
             case "pequena":
                 precioBase = 5;
                 break;
@@ -43,39 +44,34 @@ window.onload = function (){
                 precioBase = 15;
                 break;
         }
-        console.log(precioBase);
+    
+        let precioIngredientes = 0;
+    
+        for (let i = 0; i < ingredientes.length; i++) {
+            if (ingredientes[i].checked) {
+                precioIngredientes += 1;
+            }
+        }
+    
+        if (nombre == "" || direccion == "" || telefono == "" || email == ""){
+            alert("Faltan datos");
+            return;
+        }
 
         if (precioBase === 0) {
             alert("Debes seleccionar un tamaño de pizza.");
             return;
         }
-
-        //acceder al checkbox para saber cuantos ingredientes ha elegido y sumarlo
-        //let ingrediente = formulario.elements.ingredientes.value;
-        let arrayIngredientes = ["jamon", "queso", "champinones", "aceitunas"];
-        let ingredienteSeleccion = formulario.elements.ingredientes.checked;
-        let precioIngrediente = 0;
-
-        console.log(arrayIngredientes);
-        
-        for (let i = 0; i < arrayIngredientes.length; i++){
-            if (arrayIngredientes[i] == ingredienteSeleccion){
-                precioIngrediente += 1;
-            }
-        }
-        
-        if (precioIngrediente === 0) {
+    
+        if (precioIngredientes === 0) {
             alert("Debes seleccionar al menos un ingrediente.");
             return;
         }
-        
-        let precioTotal = precioBase + precioIngrediente;
-        //no se si sacar solo el precio total 
+
+        const precioTotal = precioBase + precioIngredientes;
         document.getElementById("resultado").innerHTML = `Tamaño: ${tamano}<br>Ingredientes: ${precioIngredientes}€<br>Precio total: ${precioTotal}€`;
-
     }
+        
 
-    //onclick: al apretar el boton para nos calculará el precio
-    //boton es el id del button
     boton.onclick = calcularPrecio;
 }
