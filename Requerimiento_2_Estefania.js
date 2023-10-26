@@ -38,8 +38,7 @@ function calcularPrecio() {
             precioIngredientes += 1;
         }
     }
-    // Hacemos un if para asegurarnos que no se deje ningún campo vacío.Si esta vacío sale una alerta y 
-    // se para la función.
+     // Si el precioBse esta vacío sale una alerta y se para la función .
     if (precioBase === 0) {
         alert("Debes seleccionar un tamaño de pizza.");
         return;
