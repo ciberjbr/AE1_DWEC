@@ -4,13 +4,34 @@
     <title>Formulario de Pedido de Pizza</title>
     <LINK REL=StyleSheet HREF="Pizza_css.css" TYPE="text/css" > 
     
-    
+    <!--Requerimiento 2
+
+En esta actividad debes desarrollar un formulario completo, sin envío al servidor, que sirva para dar de alta un pedido de una pizza dentro de una web de una pizzería.
+
+Los campos del formulario son los siguientes:
+
+Nombre
+Dirección
+Teléfono
+Email
+Un radio button con el tamaño de la pizza, pudiendo ser pequeña, mediana o grande
+4 Checkbox con los diferentes ingredientes de la pizza
+Un botón de procesar el pedido
+Todos los campos tienen que estar rellenos de tipo texto deben de estar rellenos para que sean válidos, además debe de elegir obligatoriamente un tamaño de la pizza y al menos un ingrediente para ella.
+
+Al pulsar el botón de procesar el pedido, se mostrará el precio total del pedido calculándolo en base a los siguientes parámetros:
+
+5€ para la pizza pequeña
+10€ para la pizza mediana
+15€ para la pizza grande
+Cada ingrediente elegido tendrá un valor de 1€-->
     
 </head>
 <body>
+    <!--Genero un formulario html-->
  <fieldset>
    <legend><h1><B>Pedido de Pizza</B></h1>  </legend>
-    
+    <!--Le doy un id al formulario para después obtener todos los valores a través de él-->
     <form id="pedido-form" >
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required><br><br>
@@ -25,6 +46,8 @@
         <input type="text" id="email" name="email" required><br><br>
 
         <label>Tamaño de la Pizza:</label><br>
+        <!--Para escoger el tamaño de la pizza creo un input type radio , asi sólo 
+        pueden escoger uno -->
         <input type="radio" id="pequena" name="tamano" value="pequena" required>5€ <br>
         <label for="pequena">Pequeña</label><br>
         <input type="radio" id="mediana" name="tamano" value="mediana" required>10€ <br>
@@ -33,6 +56,8 @@
         <label for="grande">Grande</label><br><br>
 
         <label>Ingredientes:</label><br>
+        <!-- Para escoger los ingredientes creo un input checkbox para que puedan 
+        escoger mas de uno -->
         <input type="checkbox" id="jamon" name="ingredientes[]" value="jamon">
         <label for="jamon">Jamón</label><br>
         <input type="checkbox" id="queso" name="ingredientes[]" value="queso">
@@ -41,60 +66,13 @@
         <label for="champinones">Champiñones</label><br>
         <input type="checkbox" id="aceitunas" name="ingredientes[]" value="aceitunas">
         <label for="aceitunas">Aceitunas</label><br><br>
-
+         <!-- Creo un input type button con un evento onclick para llamar a la función "calcularPrecio"-->
         <input type="button" class="boton" value="Procesar Pedido" onclick="calcularPrecio()">
     </form>
  </fieldset>
-
+          <!-- Creo un div con id "resultado" para después mostrar los resultados con un innerHTML -->
     <div id="resultado"></div>
-<!--
-    <script>
-        function calcularPrecio() {
-            const formulario = document.getElementById("pedido-form");
-            const nombre = formulario.elements.nombre.value;
-            const direccion = formulario.elements.direccion.value;
-            const telefono = formulario.elements.telefono.value;
-            const email = formulario.elements.email.value;
-            const tamano = formulario.elements.tamano.value;
-            const ingredientes = formulario.elements['ingredientes[]'];
-
-            let precioBase = 0;
-
-            switch (tamano) {
-                case "pequena":
-                    precioBase = 5;
-                    break;
-                case "mediana":
-                    precioBase = 10;
-                    break;
-                case "grande":
-                    precioBase = 15;
-                    break;
-            }
-
-            let precioIngredientes = 0;
-
-            for (let i = 0; i < ingredientes.length; i++) {
-                if (ingredientes[i].checked) {
-                    precioIngredientes += 1;
-                }
-            }
-
-            if (precioBase === 0) {
-                alert("Debes seleccionar un tamaño de pizza.");
-                return;
-            }
-
-            if (precioIngredientes === 0) {
-                alert("Debes seleccionar al menos un ingrediente.");
-                return;
-            }
-
-            const precioTotal = precioBase + precioIngredientes;
-            //no se si sacar solo el precio total 
-            document.getElementById("resultado").innerHTML = `Tamaño: ${tamano}<br>Ingredientes: ${precioIngredientes}€<br>Precio total: ${precioTotal}€`;
-        }     
-    </script>-->
+          <!-- He puesto el enlace al script aqui para que carge primero el body del  html -->
     <script src="Requerimiento_2_Estefania.js"></script>
 </body>
 </html>
