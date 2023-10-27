@@ -1,4 +1,8 @@
  
+/*
+Inicio una función que se encargará de cargar una lista 
+de películas en memoria posteriormente
+*/
 
 function listarPeliculas(){
     let peliculas = [ 
@@ -74,7 +78,10 @@ function listarPeliculas(){
 }
         
 
-
+/*
+Creo la función window.onload para que todo lo que se encuentra dentro de la función 
+se inicialice una vez que la página html se haya cargado completamente
+*/
         window.onload = function() {
 
 /* CREACIÓN DE NODO */
