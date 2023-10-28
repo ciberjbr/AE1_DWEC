@@ -1,0 +1,53 @@
+#div_inicial{
+    background-color: rgb(245, 112, 112);
+}
+
+h1{
+
+    text-align:  center;
+}
+
+h2{
+
+    text-align:  center;
+}
+
+
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form input {
+    width: 90%;
+    height: 30px;
+    margin: 0.5rem;
+  }
+
+  .minititulo{
+    color: rgb(247, 245, 245);
+    font-size: larger;
+  }
+#cajaobservaciones{
+    resize: none;
+    background-color: rgb(253, 203, 203);
+}
+#enviarDatos {
+    padding: 0.5em 1em;
+    border: none;
+    background: rgb(99, 245, 86);
+    cursor: pointer;
+  }
+
+#limpiarDatos {
+    padding: 0.5em 1em;
+    border: none;
+    background: rgb(255, 0, 0);
+    cursor: pointer;
+
+}
