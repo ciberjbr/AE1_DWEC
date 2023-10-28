@@ -4,7 +4,7 @@ Inicio una función que se encargará de cargar una lista
 de películas en memoria posteriormente
 */
 
-function listarPeliculas(){
+function addPeliculas(){
     let peliculas = [ 
         { pelicula   : 'Spiderman',
         personaje : 'Spiderman',
@@ -138,7 +138,8 @@ se inicialice una vez que la página html se haya cargado completamente
          /*
             Llamamos a la función listarPeliculas() para introducir un listado de películas en memoria
             */
-        let peliculas = listarPeliculas();
+           
+        let peliculas = addPeliculas();
         
          /*
             Creamos una tabla completa en la que iremos introduciendo las peliculas cargadas con la función listarPeliculas()
@@ -149,29 +150,29 @@ se inicialice una vez que la página html se haya cargado completamente
             e introducir los datos de cualquier sitio, de memoria o una bbdd por ej.
             */
         
-            let tabla = document.createElement("table")//<table></table>
+            let tabla = document.createElement("table")
     
-    let atr = document.createAttribute("align")//align
-    atr.value = "center"//align="center"
-    tabla.setAttributeNode(atr)//<table align="center"></table>
+    let atr = document.createAttribute("align")
+    atr.value = "center"
+    tabla.setAttributeNode(atr)
 
    
-    tabla.setAttribute("border", "1")//<table align="center" border="1"></table>
+    tabla.setAttribute("border", "1")
 
-    let trCabecera = document.createElement("tr")//<tr></tr>
-    let th1 = document.createElement("th")//<th></th>
-    let th2 = document.createElement("th")//<th></th>
-    let th3 = document.createElement("th")//<th></th>
-    let txt1 = document.createTextNode("Pelicula")//Titulo
-    let txt2 = document.createTextNode("Personaje")//Director
-    let txt3 = document.createTextNode("Actor")//Director
+    let trCabecera = document.createElement("tr")
+    let th1 = document.createElement("th")
+    let th2 = document.createElement("th")
+    let th3 = document.createElement("th")
+    let txt1 = document.createTextNode("Pelicula")
+    let txt2 = document.createTextNode("Personaje")
+    let txt3 = document.createTextNode("Actor")
 
-    th1.appendChild(txt1)//<th>Titulo</th>
-    th2.appendChild(txt2)//<th>Director</th>
-    th3.appendChild(txt3)//<th>Genero</th>
-    trCabecera.appendChild(th1)//<tr><th>Titulo</th></tr>
-    trCabecera.appendChild(th2)//<tr><th>Titulo</th><th>Director</th></tr>
-    trCabecera.appendChild(th3)//<tr><th>Titulo</th><th>Director</th><th>Genero</th></tr>
+    th1.appendChild(txt1)
+    th2.appendChild(txt2)
+    th3.appendChild(txt3)
+    trCabecera.appendChild(th1)
+    trCabecera.appendChild(th2)
+    trCabecera.appendChild(th3)
     tabla.appendChild(trCabecera)
 
          /*
@@ -202,6 +203,7 @@ se inicialice una vez que la página html se haya cargado completamente
     /*
     Una vez que genemos la tabla completada, la hacemos hija del div inicial, introudiendola en el árbol DOM de la página
     */
+   
      div_inicial.appendChild(tabla)
 
    
@@ -926,18 +928,18 @@ se inicialice una vez que la página html se haya cargado completamente
     */
 
 
-    /*
-    Creamos un label para introducir un campo select
-    */
+   
+   /*
+   Creamos un label para introducir un campo select
+   */
 
-    var labelselect = document.createElement("label")
-    labelselect.className = "minititulo"
+   var labelselect = document.createElement("label")
+   labelselect.className = "minititulo"
 
-    var txtlabelselect = document.createTextNode("Seleccione el día de la semana en el que usted vendrá")
-    labelselect.appendChild(txtlabelselect)
-    formulario.appendChild(labelselect)
-    
-    
+   var txtlabelselect = document.createTextNode("Seleccione el día de la semana en el que usted vendrá")
+   labelselect.appendChild(txtlabelselect)
+   formulario.appendChild(labelselect)
+   
     /*
     Vamos a crear un campo select con 7 opciones.
     
@@ -1057,38 +1059,35 @@ se inicialice una vez que la página html se haya cargado completamente
     hijo del formulario. Esto es para poder restablecer los datos introducidos en el
     formulario, por si nos equivocaramos.
     */
+
+   var limpiar = document.createElement("input")
+   limpiar.type = "reset"
+   limpiar.value = "limpiar formulario"
+   limpiar.id = "limpiarDatos"
+   formulario.appendChild(limpiar)
    
-    var limpiar = document.createElement("input")
-    limpiar.type = "reset"
-    limpiar.value = "limpiar formulario"
-    limpiar.id = "limpiarDatos"
-    formulario.appendChild(limpiar)
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
    
-
-    
-    
-    
-    div_inicial.appendChild(formulario);
-
-
-//var inicio = document.getElementById("div_inicial");
+   
+   div_inicial.appendChild(formulario);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+   
+
+    
+    
+    
