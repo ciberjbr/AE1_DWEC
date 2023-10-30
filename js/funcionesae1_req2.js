@@ -52,12 +52,12 @@ window.onload = function (){
                 precioIngredientes += 1;
             }
         }
-    
+
         if (nombre == "" || direccion == "" || telefono == "" || email == ""){
             alert("Faltan datos");
             return;
         }
-
+        
         if (precioBase === 0) {
             alert("Debes seleccionar un tamaño de pizza.");
             return;
