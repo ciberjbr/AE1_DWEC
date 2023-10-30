@@ -10,6 +10,11 @@ function calcularPrecio() {
     const direccion = formulario.elements.direccion.value;
     const telefono = formulario.elements.telefono.value;
     const email = formulario.elements.email.value;
+    // Ponemos un if para que no se quede vacio ningun dato
+    if (nombre == ""  ,direccion == "" , telefono == "" || email == ""){
+        alert("Faltan datos");
+        return;
+    }
     const tamano = formulario.elements.tamano.value;
     const ingredientes = formulario.elements['ingredientes[]'];
  // inicializamos la variable "let precioBase " a 0 .
